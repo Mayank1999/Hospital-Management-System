@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<title>Feedback</title>
+	<style>
+	body{
+		background-color: #ccccff;
+		background-position: center; 
+	}
+	.sub{
+		padding: 15px 25px; font-size: 24px; text-align: center; cursor: pointer; outline: none; color: #fff; background-color: #00802b; border:none; border-radius: 15px; box-shadow: 0 9px #999; font-size:20pt;}
+	.sub:hover{
+		background:color: #3e8e41;}
+	.sub:active{
+		background:color: #3e8e41;
+		box-shadow: 0 5px #666;
+		transform: translateY(4px);
+	}
+	.sub1{
+		margin:20px; padding: 15px 25px; font-size: 24px; text-align: center; cursor: pointer; outline: none; color: #fff; background-color: #cc0000; border:none; border-radius: 15px; box-shadow: 0 9px #999; font-size:20pt;}
+	.sub1:hover{
+		background:color: #3e8e41;}
+	.sub1:active{
+		background:color: #3e8e41;
+		box-shadow: 0 5px #666;
+		transform: translateY(4px);
+	}
+	.button {
+	  background-color: #cc0000; /* Green */
+	  border: none;
+	  color: white;
+	  padding: 16px 32px;
+	  text-align: center;
+	  text-decoration: none;
+	  display: inline-block;
+	  font-size: 16px;
+	  margin: 4px 2px;
+	  -webkit-transition-duration: 0.4s; /* Safari */
+	  transition-duration: 0.4s;
+	  cursor: pointer;
+	}
+	.b {
+	  background-color: #a6a6a6; 
+	  color: black; 
+	  border: 2px solid #cc0000;
+	}
+	.b:hover {
+	  background-color: #cc0000;
+	  color: white;
+	}
+	</style>
+	<script>
+		function goBack()
+		{
+  			window.history.back();
+		}
+	</script>
+			<div align="right"><button class="button b" onclick="goBack()"><b><h1>BACK</h1></b></button></div>
+			<form name="Feedback" action="insertfeed.php" method="post">
+			<fieldset style="font-size:25pt;">
+				<legend  align="center"><b>FEEDBACK</b></legend>
+				<label>NAME*: <input type="text" name="name" placeholder="Enter your name" style="font-size:20pt; opacity:0.7;" size="25" required></label><br><br>
+				<label>PATIENT RELATION*: <select style="font-size:20pt; opacity:0.7;" name="patrel" required>
+							 <option value="" name="" style="font-size:20pt; opacity:0.7;">select</option>
+							 <option value="Guardian" name="Guardian" style="font-size:20pt; opacity:0.7;">Guardian</option>
+							 <option value="Yourself" name="Yourself" style="font-size:20pt; opacity:0.7;">Yourself</option>
+							 </select></label><br><br>
+				<label>SERVICE RATING*: <input type="radio" name="rating" value="1" style="width:25px; height:25px;" required> 1 <input type="radio" name="rating" value="2" style="width:25px; height:25px;"> 2 <input type="radio" name="rating" value="3" style="width:25px; height:25px;"> 3 <input type="radio" name="rating" value="4" style="width:25px; height:25px;"> 4 <input type="radio" name="rating" value="5" style="width:25px; height:25px;"> 5 </label><br><br>
+				<label>ANY ISSUES?<br><textarea name="issues" rows="5" cols="25" wrap="physical" placeholder="We are sorry for inconvenience :(" style="font-size:20pt; opacity:0.7;"></textarea></label><br>
+				<label>ANY SUGGESTIONS?<br><textarea name="suggestions" rows="5" cols="25" wrap="physical" placeholder="Type your suggestions here" style="font-size:20pt; opacity:0.7;"></textarea></label><br><br>
+				<button class="sub" type="submit" name="sub" value="Submit">Submit</button><input class="sub1" type="reset" value="Reset">			
+			</fieldset>
+			</form>	
+	</head>
+	<body>
+		<marquee style="font-size:30pt;" scrollamount="17" direction = "left">PATIENT'S EXPERIENCE IS AT THE HEART OF HEALTHCARE</marquee>
+	</body>
+</html>
